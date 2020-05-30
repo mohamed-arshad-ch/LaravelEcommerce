@@ -12,5 +12,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// Frontend Route.........................
 Route::get('/','HomeConroller@index'); 
+
+
+
+
+
+
+
+//Backend Route............................
+
+Route::get('/admin','AdminController@index'); 
