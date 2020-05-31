@@ -24,3 +24,7 @@ Route::get('/','HomeConroller@index');
 //Backend Route............................
 
 Route::get('/admin','AdminController@index'); 
+
+Route::get('/dashbord','AdminController@show_dashbord'); 
+
+Route::post('/admin-dashbord','AdminController@dashbord' );
