@@ -7,7 +7,7 @@
 					<a href="index.html">Home</a> 
 					<i class="icon-angle-right"></i>
 				</li>
-				<li><a href="#">Dashboard</a></li>
+				<li><a href="">Dashboard</a></li>
 			</ul>
 
 			<div class="row-fluid">

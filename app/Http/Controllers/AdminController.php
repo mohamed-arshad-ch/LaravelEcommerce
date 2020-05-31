@@ -50,4 +50,13 @@ class AdminController extends Controller
     
 
    }
+
+
+   public function logout(){
+
+    Session::flush();
+
+    return redirect::to('/admin');
+
+   }
 }
