@@ -20,7 +20,26 @@ class CategoryController extends Controller
 
     public function all_category(){
 
-        return view('admin.all_category');
+        $all_category_info=DB::table('tbl_category')->get();
+        $manage_category=view('admin.all_category')
+            ->with('all_category_info',$all_category_info);
+
+            return view('admin_layout')
+                    ->with('admin.all_category',$manage_category);
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // return view('admin.all_category');
     }
 
     public function save_category(Request $request){

@@ -21,25 +21,43 @@
 						<table class="table table-striped table-bordered bootstrap-datatable datatable">
 						  <thead>
 							  <tr>
-								  <th>Username</th>
-								  <th>Date registered</th>
-								  <th>Role</th>
+								  <th>Category ID</th>
+								  <th>Category Name</th>
+								  <th>Description</th>
 								  <th>Status</th>
 								  <th>Actions</th>
 							  </tr>
-						  </thead>   
+                          </thead> 
+                          @foreach($all_category_info as $v_category) 
 						  <tbody>
 							<tr>
-								<td>Anton Phunihel</td>
-								<td class="center">2012/01/01</td>
-								<td class="center">Member</td>
+								<td>{{$v_category->id}}</td>
+								<td class="center">{{$v_category->category_name}}</td>
+								<td class="center">{{$v_category->category_description}}</td>
 								<td class="center">
-									<span class="label label-success">Active</span>
+                                    @if($v_category->publication_status==1)
+                                    <span class="label label-success">Active</span>
+                                    @else
+                                    <span class="label label-danger">UnActive</span>
+
+                                    @endif
 								</td>
 								<td class="center">
-									<a class="btn btn-success" href="#">
-										<i class="halflings-icon white zoom-in"></i>  
-									</a>
+
+                                @if($v_category->publication_status==1)
+
+								
+                                    <a class="btn btn-danger" href="#">
+										<i class="halflings-icon white thumbs-down"></i>  
+                                    </a>
+                                    @else
+                                    <a class="btn btn-success" href="#">
+										<i class="halflings-icon white thumbs-up"></i>  
+                                    </a>
+
+                                   
+
+                                    @endif
 									<a class="btn btn-info" href="#">
 										<i class="halflings-icon white edit"></i>  
 									</a>
@@ -49,7 +67,8 @@
 								</td>
 							</tr>
 							
-						  </tbody>
+                          </tbody>
+                           @endforeach
 					  </table>            
 					</div>
 				</div><!--/span-->
