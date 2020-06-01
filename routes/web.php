@@ -39,4 +39,13 @@ Route::get('/all-category','CategoryController@all_category');
 
 Route::post('/save-category','CategoryController@save_category' );
 
+Route::get('/unactive_category/{id}','CategoryController@unactive_category' );
+Route::get('/active_category/{id}','CategoryController@active_category' );
+
+Route::get('/edit-category/{id}','CategoryController@edit_category' );
+
+Route::post('/update-category/{id}','CategoryController@update_category' );
+
+Route::get('/delete-category/{id}','CategoryController@delete_category' );
+
 
