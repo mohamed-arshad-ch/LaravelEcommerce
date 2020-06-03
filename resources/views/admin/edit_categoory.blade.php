@@ -24,7 +24,7 @@
                         ?>
 
 
-                    <p>
+            <p>
 			
 			<div class="row-fluid sortable">
 				<div class="box span12">

@@ -35,6 +35,7 @@ Route::get('/logout','AdminController@logout');
 //category Route
 
 Route::get('/add-category','CategoryController@index'); 
+
 Route::get('/all-category','CategoryController@all_category'); 
 
 Route::post('/save-category','CategoryController@save_category' );
@@ -48,4 +49,14 @@ Route::post('/update-category/{id}','CategoryController@update_category' );
 
 Route::get('/delete-category/{id}','CategoryController@delete_category' );
 
+//Manufacture Route
 
+Route::get('/add-manufacture','ManufactureController@index');
+
+Route::post('/save-manufacture','ManufactureController@save_manufacture' );
+
+Route::get('/all-manufacture','ManufactureController@all_manufacture'); 
+
+Route::get('/unactive_manufacture/{id}','ManufactureController@unactive_manufacture' );
+
+Route::get('/active_manufacture/{id}','ManufactureController@active_manufacture' );
